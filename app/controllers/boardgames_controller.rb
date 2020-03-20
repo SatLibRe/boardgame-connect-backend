@@ -9,7 +9,9 @@ end
 
 def create 
     boardgame = Boardgame.find_or_create_by(api_id: boardgame_params[:id])
-    boardgame.update(boardgame_params)
+    newparams = boardgame_params
+    newparams.delete('id')
+    boardgame.update(newparams)
     boardgame.save
     render json: boardgame 
 end 
