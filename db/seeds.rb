@@ -24,7 +24,7 @@ b1 = Boardgame.create(
     image_url: "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559258096678-51Eiofu9mqL.jpg",
     thumb_url: "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559258096678-51Eiofu9mqL.jpg")
 
-r1 = Room.create(name:"Ass suckers", host_id: 1, zoom_url:"hhhshhs")
+r1 = Room.create(name:"Ass suckers", host_id: 1, zoom_url:"hhhshhs", boardgame_id: Boardgame.first.id)
 
 ubg1 = UserBoardGame.create(user_id: User.first.id, boardgame_id: Boardgame.first.id)
 
