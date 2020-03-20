@@ -8,7 +8,9 @@ class BoardgamesController < ApplicationController
 end 
 
 def create 
-    boardgame = Boardgame.create(room_params)
+    boardgame = Boardgame.find_or_create_by(api_id: boardgame_params[:id])
+    boardgame.update(boardgame_params)
+    boardgame.save
     render json: boardgame 
 end 
 
@@ -25,7 +27,7 @@ end
 private 
 
 def boardgame_params 
-    params.require(:boardgame).permit(:api_id, :name, :year_published, :max_players, :min_players, :min_playtime, :description, :description_preview, :image_url, :thumb_url)
+    params.require(:boardgame).permit(:id, :name, :year_published, :max_players, :min_players, :min_playtime, :description, :description_preview, :image_url, :thumb_url)
 end 
 
   

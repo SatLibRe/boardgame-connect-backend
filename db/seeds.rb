@@ -14,7 +14,7 @@ u1 = User.create(name: "Miles", password:"123", img_url:"https://images.foxtv.co
 
 b1 = Boardgame.create( 
     api_id: 1,
-    name: "Sorry!",
+    name: "Catan",
     year_published: 1995,
     min_players: 3,
     max_players: 4,
@@ -24,9 +24,37 @@ b1 = Boardgame.create(
     image_url: "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559258096678-51Eiofu9mqL.jpg",
     thumb_url: "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559258096678-51Eiofu9mqL.jpg")
 
+b2 = Boardgame.create( 
+    api_id: 1,
+    name: "Monopoly",
+    year_published: 1995,
+    min_players: 3,
+    max_players: 4,
+    min_playtime: 45,
+    description: "fun",
+    description_preview: "fun",
+    image_url: "https://vignette.wikia.nocookie.net/monopoly/images/6/66/Nascarmonopoly01.jpg/revision/latest/window-crop/width/200/x-offset/141/y-offset/0/window-width/361/window-height/360?cb=20170213144415",
+    thumb_url: "https://vignette.wikia.nocookie.net/monopoly/images/6/66/Nascarmonopoly01.jpg/revision/latest/window-crop/width/200/x-offset/141/y-offset/0/window-width/361/window-height/360?cb=20170213144415")
+    
+b3 = Boardgame.create( 
+    api_id: 1,
+    name: "Risk",
+    year_published: 1995,
+    min_players: 3,
+    max_players: 4,
+    min_playtime: 45,
+    description: "fun",
+    description_preview: "fun",
+    image_url: "https://images-na.ssl-images-amazon.com/images/I/81QKEkqUqKL._SY355_.png",
+    thumb_url: "https://images-na.ssl-images-amazon.com/images/I/81QKEkqUqKL._SY355_.png")
+
+
+
 r1 = Room.create(name:"Ass suckers", host_id: 1, zoom_url:"hhhshhs", boardgame_id: Boardgame.first.id)
 
 ubg1 = UserBoardGame.create(user_id: User.first.id, boardgame_id: Boardgame.first.id)
+ubg2 = UserBoardGame.create(user_id: User.first.id, boardgame_id: Boardgame.second.id)
+ubg3 = UserBoardGame.create(user_id: User.first.id, boardgame_id: Boardgame.third.id)
 
 c1 = Comment.create(boardgame_id: Boardgame.first.id, content: "rails fucking sucks ass")
 
