@@ -12,6 +12,7 @@ Comment.destroy_all
 Room.destroy_all
 
 u1 = User.create(name: "Miles", password:"123", img_url:"https://images.foxtv.com/static.fox5dc.com/www.fox5dc.com/content/uploads/2019/10/932/524/Tommy-Lee-Jenkins.jpg?ve=1&tl=1")
+u2 = User.create(name: "Jimmy", password:"123", img_url:"https://images.foxtv.com/static.fox5dc.com/www.fox5dc.com/content/uploads/2019/10/932/524/Tommy-Lee-Jenkins.jpg?ve=1&tl=1")
 
 b1 = Boardgame.create( 
     api_id: 1,
@@ -61,3 +62,4 @@ ubg3 = UserBoardGame.create(user_id: User.first.id, boardgame_id: Boardgame.thir
 c1 = Comment.create(boardgame_id: Boardgame.first.id, content: "Heyo")
 
 ur1 = UserRoom.create(user_id: User.first.id, room_id: Room.first.id)
+ur1 = UserRoom.create(user_id: User.second.id, room_id: Room.second.id)
