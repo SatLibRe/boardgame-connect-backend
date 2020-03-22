@@ -5,8 +5,13 @@ class UsersController < ApplicationController
     end 
 
     def create 
-        user = User.create(user_params)
+        user = User.new(name: params[:name], password: params[:password])
         
+        if user.save
+            render json: user
+        else 
+            render json: {errors: user.errors.full_messages}
+        end
     end 
 
     def show 

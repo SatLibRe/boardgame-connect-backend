@@ -12,7 +12,7 @@ Things you may want to cover:
 * Configuration
 
 * Database creation
-e
+
 * Database initialization
 
 * How to run the test suite
@@ -24,4 +24,5 @@ e
 * ...
 
 
+Test
 Test
