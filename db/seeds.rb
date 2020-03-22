@@ -53,7 +53,8 @@ b3 = Boardgame.create(
 
 
 r1 = Room.create(name:"Fun", host_id: 1, zoom_url:"hhhshhs", boardgame_id: Boardgame.first.id)
-r1 = Room.create(name:"So much more fun", host_id: 1, zoom_url:"siiii", boardgame_id: Boardgame.second.id)
+r2 = Room.create(name:"2nd Catan Room", host_id: 1, zoom_url:"2nd", boardgame_id: Boardgame.first.id)
+r3 = Room.create(name:"So much more fun", host_id: 1, zoom_url:"siiii", boardgame_id: Boardgame.second.id)
 
 ubg1 = UserBoardGame.create(user_id: User.first.id, boardgame_id: Boardgame.first.id)
 ubg2 = UserBoardGame.create(user_id: User.first.id, boardgame_id: Boardgame.second.id)
@@ -62,4 +63,5 @@ ubg3 = UserBoardGame.create(user_id: User.first.id, boardgame_id: Boardgame.thir
 c1 = Comment.create(boardgame_id: Boardgame.first.id, content: "Heyo")
 
 ur1 = UserRoom.create(user_id: User.first.id, room_id: Room.first.id)
+ur1 = UserRoom.create(user_id: User.second.id, room_id: Room.first.id)
 ur1 = UserRoom.create(user_id: User.second.id, room_id: Room.second.id)
