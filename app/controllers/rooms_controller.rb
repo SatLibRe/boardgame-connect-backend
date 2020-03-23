@@ -12,7 +12,7 @@ class RoomsController < ApplicationController
     def show 
         room = Room.find(params[:id])
         
-        render json: room.to_json(include: [:users])
+        render json: room.to_json(include: [:users, :boardgame])
     end 
     
     def destroy 
