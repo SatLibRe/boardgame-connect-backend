@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   post '/login', to: 'auth#login'
   get '/auto_login', to: 'auth#auto_login'
   post '/userboardgames', to: 'user_board_games#create'
+  post '/rooms', to: 'rooms#create'
+  get '/rooms/:id', to: 'rooms#show'
 end
