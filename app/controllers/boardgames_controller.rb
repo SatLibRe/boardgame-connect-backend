@@ -5,8 +5,8 @@ class BoardgamesController < ApplicationController
   #include the rooms for boardgames
 
   def index 
-    boardgame = Boardgame.all 
-    render json: boardgame.to_json(include: [:rooms])
+    boardgames = Boardgame.all 
+    render json: boardgames.to_json( include: [:rooms, :users])
   end 
 
 def create 

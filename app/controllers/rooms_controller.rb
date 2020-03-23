@@ -1,7 +1,7 @@
 class RoomsController < ApplicationController
     def index 
         rooms = Room.all 
-        render json: rooms.to_json(include: [:boardgame])
+        render json: rooms.to_json(include: [:boardgame, :users])
     end 
 
     def create 
