@@ -12,7 +12,7 @@ class RoomsController < ApplicationController
     def show 
         room = Room.find(params[:id])
         
-        render json: room.to_json(include: [:users, :boardgame])
+        render json: room.to_json(include: [:users, :boardgames])
     end 
     
     def destroy 
@@ -25,4 +25,4 @@ class RoomsController < ApplicationController
     def room_params 
         params.require(:room).permit(:name, :host_id, :zoom_url, :boardgame_id, :maxplayers)
     end 
-end.para
+end
