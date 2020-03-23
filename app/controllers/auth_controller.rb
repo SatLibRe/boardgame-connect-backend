@@ -10,7 +10,7 @@ def login
 end
 
 def auto_login
-    user = User.find_by(id: request.headers["Authorization"])
+    user = User.find_by(id: request.headers["AuthorTest &&rization"])
     if user
         render json: user
     else

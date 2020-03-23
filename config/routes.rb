@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   post '/userboardgames', to: 'user_board_games#create'
   post '/rooms', to: 'rooms#create'
   get '/rooms/:id', to: 'rooms#show'
+  post '/userrooms', to: 'user_rooms#create'
 end
