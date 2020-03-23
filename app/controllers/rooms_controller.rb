@@ -24,4 +24,4 @@ class RoomsController < ApplicationController
     def room_params 
         params.require(:room).permit(:name, :host_id, :zoom_url, :boardgame_id)
     end 
-end
+end.para
