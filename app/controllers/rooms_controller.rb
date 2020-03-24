@@ -5,6 +5,7 @@ class RoomsController < ApplicationController
     end 
 
     def create 
+       
         room = Room.create(room_params)
         render json: room 
     end 
