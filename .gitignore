@@ -20,3 +20,17 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+#zoom API info 
+
+API Key
+99ao59ojSDq2wEoJM7Hr8ACopy
+
+API Secret
+zL17jGTjvQ8cqdsNjH7pfP1OLlLwfWWiqVzK
+ 
+Expire in:    
+Your token will be expired at 11:34 03/31/2020
+JWT Token
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOm51bGwsImlzcyI6Ijk5YW81OW9qU0RxMndFb0pNN0hyOEEiLCJleHAiOjE1ODU2Njg4ODksImlhdCI6MTU4NTA2NDA3NH0.lkwAQJOUuq64Ne4awKFZ35HKsrtwOfLMM5kIlptNGVMCopy
+
