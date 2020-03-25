@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   post '/rooms', to: 'rooms#create'
   get '/rooms/:id', to: 'rooms#show'
   post '/userrooms', to: 'user_rooms#create'
+  post '/messages', to: 'messages#create'
+  
 
   
   mount ActionCable.server => '/cable'
