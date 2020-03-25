@@ -15,6 +15,12 @@ class RoomsController < ApplicationController
         
         render json: room.to_json(include: [:users, :boardgame, :messages])
     end 
+
+    def update
+        room = Room.find(params[:id])
+        room.update(room_params)
+        
+    end
     
     def destroy 
         room = Room.find(params[:id])

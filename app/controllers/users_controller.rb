@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
     def index 
         users = User.all 
-        render json: users.to_json(include: [:boardgames])
+        render json: users.to_json(include: [:boardgames, :rooms])
     end 
 
     def create 
@@ -18,6 +18,11 @@ class UsersController < ApplicationController
         user = User.find(params[:id])
         render json: user.to_json(include: [:boardgames])
     end 
+
+    def showusersrooms
+        user = User.find(params[:id])
+        render json: user.rooms.to_json(include: [:users])
+    end
     
     def destroy 
         user = User.find(params[:id])

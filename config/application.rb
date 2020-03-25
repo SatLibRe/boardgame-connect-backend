@@ -26,10 +26,16 @@ module BoardgameBackend
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins '*'
-        resource '*', headers: :any, methods: [:get, :post, :options]
-      end
+          origins '*'
+          resource '*', headers: :any, methods: [:get, :post, :options]
+        end
     end
+
+#     resource(
+#           '*',
+#           headers: :any,
+#           methods: [:get, :patch, :put, :delete, :post, :options]
+#           )
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
