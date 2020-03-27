@@ -5,7 +5,7 @@ class UsersController < ApplicationController
     end 
 
     def create 
-        user = User.new(name: params[:name], password: params[:password], zoom_id: params[:zoom_id] )
+        user = User.new(name: params[:name], password: params[:password], zoom_id: params[:zoom_id], img_url: params[:img_url] )
         
         if user.save
             render json: user
@@ -29,9 +29,4 @@ class UsersController < ApplicationController
         User.delete()
     end 
 
-    private 
-
-    def users_params 
-        params.require(:user).permit(:name, :password, :img_url, :zoom_id)
-    end 
 end
