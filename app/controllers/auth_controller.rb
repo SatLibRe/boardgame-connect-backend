@@ -10,9 +10,9 @@ def login
 end
 
 def auto_login
-    user = User.find_by(id: request.headers["AuthorTest &&rization"])
-    if user
-        render json: user
+    
+    if session_user
+        render json: session_user
     else
         render json: {errors: "Incorrect user id."}
     end
